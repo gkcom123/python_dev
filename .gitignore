@@ -1,0 +1,32 @@
+# Python bytecode
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Virtual environment
+venv/
+env/
+.env/
+
+# Django settings and logs
+*.log
+*.sqlite3
+db.sqlite3
+
+# IDE or editor files
+.vscode/
+.idea/
+
+# macOS system files
+.DS_Store
+
+# Python wheel files
+*.whl
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Other files you may want to ignore
+*.bak
+*.swp
