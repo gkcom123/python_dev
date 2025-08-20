@@ -16,9 +16,24 @@ class Dog:
 class Cat:
     def speak(self):
         return "meao"
-def animal_factory(animal= 'dog'):
-    if animal =='Dog': return Dog()
-    if animal =='Cat': return Cat()
+
+
+def animal_factory(animal='dog'):
+    """Simple factory returning an animal instance.
+
+    The original implementation compared the provided ``animal`` name
+    using exact, case-sensitive matches (``'Dog'`` and ``'Cat'``) while the
+    default argument was ``'dog'``. As a result, calling the factory with
+    lowercase values like ``animal_factory('dog')`` returned ``None``.
+    The function now normalizes the input to lowercase and handles unknown
+    animal names explicitly.
+    """
+    animal = animal.lower()
+    if animal == 'dog':
+        return Dog()
+    if animal == 'cat':
+        return Cat()
+    raise ValueError(f"Unknown animal: {animal}")
 
 pet = animal_factory("Dog")
 print(pet.speak())
