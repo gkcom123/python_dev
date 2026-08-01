@@ -1,5 +1,5 @@
 def count_in_loop(n):
-    count = 1
+    count = 2
     while count <= n:
         yield count
         count += 1
